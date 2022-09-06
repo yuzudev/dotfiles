@@ -1,7 +1,7 @@
 
 ### Yuzu's Dotfiles
 
-![Screenshot](1657.png)
+![Screenshot](screenshot.png)
 
 
 | App                       | Name
