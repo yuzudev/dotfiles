@@ -1,0 +1,70 @@
+# start of config file
+
+env:
+        TERM: xterm-256color
+
+# important to make it look good
+window:
+        opacity: 0.70 # 0.97
+        padding:
+                y: 24
+                x: 24
+        class:
+                instance: Alacritty
+                general: Alacritty
+
+        gtk_theme_variant: dark
+
+# cursor
+cursor:
+        style:
+                shape: Underline
+
+# this should be true already
+live_config_reload: true
+
+# shell settings
+shell:
+        program: /usr/bin/zsh
+
+scrolling:
+        history: 3000
+        multiplier: 3
+
+colors:
+        primary:
+                background: '#131319'
+                foreground: '#FCFAF9'
+        normal:
+                black: '#272838'
+                white: '#FCFAF9'
+                green: '#009877'
+                red: '#B41D37'
+                yellow: '#FFD479'
+                cyan: '#02A9EA'
+                blue: '#88C1F5'
+                magenta: '#4A4B95'
+        bright:
+                black: '#060608'
+                white: '#E4E6EA'
+                green: '#00C49A'
+                red: '#D32240'
+                cyan: '#15BBFD'
+                blue: '#6AB0F3'
+                magenta: '#585AAD'
+
+font:
+        normal:
+                family: Jet Brains Mono
+                style: Regular
+        bold:
+                family: Jet Brains Mono
+                style: Bold
+        italic:
+                family: Jet Brains Mono
+                style: Regular
+        bold_italic:
+                family: Jet Brains Mono
+                style: Bold Italic
+        size: 8.5
+        draw_bold_text_with_bright_colors: true

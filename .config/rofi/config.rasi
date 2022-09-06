@@ -1,0 +1,109 @@
+configuration {
+    fullscreen: true;
+    display-drun: "Application";
+    display-window: "Window";
+    display-run: "Program";
+    modi: "window,drun,run";
+    font: "TrueType 10";
+    drun-display-format: "{icon}     🡆 {name}";
+    text-color: @fg-alt;
+    show-icons: true;
+    icon-theme: "Papirus";
+}
+
+@theme "/dev/null"
+
+* {
+    red-a: #A30015;
+    red-b: #FF0B3F;
+    black-a: #131319;
+    black-b: #353546;
+    white-a: #FCFAF9;
+    white-b: #F2F7F8;
+    yellow-a: #FFC857;
+    yellow-b: #FFD479;
+    purple-a: #561778;
+    purple-b: #3D1056;
+
+    background-color: @black-a;
+    text-color: @yellow-a;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    spacing: 3;
+}
+
+/** wIndow */
+
+window {
+    width: 60%;
+}
+
+/** elements */
+
+element {
+    padding: 8;
+    border: 0;
+    text-color: @red-b;
+}
+
+element.selected.normal {
+    text-color: @yellow-a;
+}
+
+element-text {
+    background-color: inherit;
+    text-color: inherit;
+}
+
+element-icon {
+    background-color: inherit;
+    size: 18;
+}
+
+/** entries */
+
+entry {
+    text-color: @white-a;
+    padding: 4px 4px;
+    expand: false;
+    width: 10em;
+}
+
+scrollbar {
+    width: 0px;
+    border: 0;
+    handle-width: 0px;
+    padding: 0;
+}
+
+inputbar {
+    spacing: 0;
+    padding: 4;
+    children: [prompt, entry];
+}
+
+listview {
+    colums: 1;
+    lines: 8;
+    spacing: 0px;
+    border: 0;
+}
+
+case-indicator {
+    spacing: 0;
+}
+
+/** main box */
+
+mainbox {
+    padding: 6;
+}
+
+/** prompt */
+
+prompt {
+    enabled: true;
+    padding: 8 0 6 8;
+    text-color: @yellow-a;
+}
