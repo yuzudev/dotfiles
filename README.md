@@ -1,8 +1,7 @@
 
 
-
 | App                       | Name
-----------------------------------
+|---------------------------|-----
 | WM/DE                     | i3/i3gaps
 | init system               | openrc
 | display manager           | gdm
