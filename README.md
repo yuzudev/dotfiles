@@ -13,6 +13,7 @@
 | file explorer             | nemo
 | web browser               | firefox
 | terminal emulator         | alacritty
+| shell                     | zsh
 
 related:
 - network-manager-applet
