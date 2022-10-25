@@ -1,0 +1,114 @@
+super + Escape
+    pkill -USR1 -x sxhkd
+
+# Flameshot
+Print
+    flameshot gui
+
+#Rofi & dmenu
+
+super + d
+    rofi -lines 12 -padding 18 -width 60 -location 0 -show drun -sidebar-mode -columns 3 -font 'TrueType 8'
+
+super + p
+    rofi -show power-menu -modi power-menu:rofi-power-menu
+
+super + s; {e}
+  { rofi -show emoji -modi emoji}
+
+# alt + g
+#     rofi-mpc
+
+alt + p
+    rofi -show
+
+# Application Keybindings
+
+super + w
+    firefox
+
+super + shift + w
+    firefox --private-window
+
+#Audio
+XF86AudioRaiseVolume
+    pactl set-sink-volume alsa_output.pci-0000_00_1f.3.analog-stereo +10%
+
+XF86AudioLowerVolume
+    pactl set-sink-volume alsa_output.pci-0000_00_1f.3.analog-stereo -10%
+
+XF86AudioMute
+    pactl set-sink-mute alsa_output.pci-0000_00_1f.3.analog-stereo toggle
+
+#Brightness
+XF86MonBrightnessUp
+    xbacklight -inc 10
+
+XF86MonBrightnessDown
+    xbacklight -dec 10
+
+ctrl + alt + p
+    playerctl play-pause
+
+ctrl + shift + period
+    playerctl next
+
+ctrl + shift + comma
+    playerctl previous
+
+alt + {h,j,k,l}
+   mpc {prev,next,play,pause}
+
+#i3 Specific Keybindings
+
+#movement
+
+super+{h,j,k,l}
+    i3-msg focus {left,down,up,right}
+
+super+shift+{h,j,k,l}
+    i3-msg move {left,down,up,right}
+
+super + {z,x}
+    i3-msg split {v,h}
+
+super + f
+    i3-msg fullscreen toggle
+
+super + shift + space
+    i3-msg floating toggle
+
+super + space
+    i3-msg focus mode_toggle
+
+super + a
+    i3-msg focus parent
+
+#workspaces
+
+super + shift + b
+    i3-msg move workspace to output next
+
+super + {1-9,0}
+    i3-msg workspace {1-9,10}
+
+super + shift+{1-9,0}
+    i3-msg move container to workspace number {1-9,10}
+
+super + Return
+    alacritty
+
+super + q
+    i3-msg kill
+
+super + shift + c
+    i3-msg reload
+
+super + shift + r
+    i3-msg restart
+
+super + ctrl + {h,j,k,l}
+    i3-msg resize {grow width 50 px, shrink height 50 px, grow height 50 px, shrink width 50 px}
+
+super + y
+    polybar-msg cmd toggle

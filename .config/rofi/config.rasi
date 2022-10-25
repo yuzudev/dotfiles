@@ -5,10 +5,10 @@ configuration {
     display-run: "Program";
     modi: "window,drun,run";
     font: "TrueType 10";
-    drun-display-format: "{icon}     🡆 {name}";
+    drun-display-format: "{icon} {name}";
     text-color: @fg-alt;
     show-icons: true;
-    icon-theme: "Papirus";
+    icon-theme: "Deepin2022-Dark";
 }
 
 @theme "/dev/null"

@@ -18,14 +18,21 @@
 | web browser               | firefox
 | terminal emulator         | alacritty
 | shell                     | zsh
+| keybindings               | sxhkd
 
 related:
 - network-manager-applet
 - xbacklight
 - pulseaudio
+- feh
+- flameshot
 
 fonts:
 - jetbrains mono
 - iosevka
 - fira code
 - truetype
+
+personal notes:
+- I'm using a picom fork installed from the AUR `yay -Sy picom-ibhagwan-git`
+- I'm using `loginctl suspend` to sleep the PC, I also wrote a keybinding for this
