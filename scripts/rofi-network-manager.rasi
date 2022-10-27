@@ -1,12 +1,10 @@
 configuration {
     font: "TrueType 10";
-    show-icons: true;
-    icon-theme: "Deepin2022-Dark";
-
-    drun-display-format: "{icon} {name}";
-    display-drun: "Apps";
-
-    scroll-method: 0;
+	show-icons:		false;
+	sidebar-mode: 	false;
+	hover-select: true;
+	me-select-entry: "";
+	me-accept-entry: [MousePrimary];
 }
 
 * {
@@ -42,44 +40,30 @@ configuration {
     background-color:            rgba ( 0, 0, 0, 0 % );
 }
 
+/** wIndow */
+
 window {
     background-color: @background;
-    border:           0;
-    padding:          30;
+    border: 0;
+    padding: 10;
 }
 
-listview {
-    lines:                          10;
-    columns:                        3;
+button {
+    spacing:          0;
+    text-color:       @normal-foreground;
 }
 
-mainbox {
-    border:  0;
-    padding: 0;
+button.selected {
+    background-color: @selected-normal-background;
+    text-color:       @selected-normal-foreground;
 }
 
-message {
-    border:       2px 0px 0px ;
-    border-color: @separatorcolor;
-    padding:      1px ;
-}
-
-textbox {
-    text-color: @foreground;
-}
-
-listview {
-    fixed-height: 0;
-    border:       8px 0px 0px ;
-    border-color: @separatorcolor;
-    spacing:      8px ;
-    scrollbar:    false;
-    padding:      2px 0px 0px ;
-}
+/** elements */
 
 element {
-    border:  0;
-    padding: 1px ;
+    padding: 8;
+    border: 0;
+    text-color: @normal-foreground;
 }
 
 element-text {
@@ -132,52 +116,39 @@ element.alternate.active {
     text-color:       @alternate-active-foreground;
 }
 
+/** entries */
+
+entry {
+    text-color: @foreground;
+    padding: 4px 4px;
+    expand: false;
+    width: 10em;
+}
+
 scrollbar {
     width:        4px ;
     border:       0;
-    handle-color: @normal-foreground;
+    handle-color: @selected-normal-foreground;
     handle-width: 8px ;
     padding:      0;
 }
 
-mode-switcher {
-    border:       2px 0px 0px ;
-    border-color: @separatorcolor;
-}
-
-button {
-    spacing:    0;
-    text-color: @normal-foreground;
-}
-
-button.selected {
-    background-color: @selected-normal-background;
-    text-color:       @selected-normal-foreground;
-}
-
-inputbar {
-    spacing:    0;
-    text-color: @normal-foreground;
-    padding:    1px ;
-}
-
 case-indicator {
-    spacing:    0;
-    text-color: @normal-foreground;
+    spacing: 0;
 }
 
-entry {
-    spacing:    0;
-    text-color: @normal-foreground;
+/** main box */
+
+mainbox {
+    padding: 6;
 }
+
+/** prompt */
 
 prompt {
-    spacing:    0;
-    text-color: @normal-foreground;
-}
-
-inputbar {
-    children:   [ prompt,textbox-prompt-colon,entry,case-indicator ];
+    enabled: true;
+    padding: 4 0 3 4;
+    text-color: @alternate-normal-foreground;
 }
 
 textbox-prompt-colon {
@@ -185,4 +156,23 @@ textbox-prompt-colon {
     str:        ":";
     margin:     0px 0.3em 0em 0em ;
     text-color: @normal-foreground;
+}
+
+textbox {
+	text-color: @foreground;
+}
+
+listview {
+	spacing:		4px;
+	dynamic:		true;
+	fixed-height:	false;
+	border:			0;
+	scrollbar:		false;
+	text-color:		@separatorcolor;
+}
+
+inputbar {
+    spacing: 0;
+    padding: 4;
+	children: [textbox-prompt-colon, entry];
 }
